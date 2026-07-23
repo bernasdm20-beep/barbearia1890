@@ -36,6 +36,12 @@
     background:radial-gradient(circle, rgba(79,184,232,0.16) 0%, transparent 68%);
     pointer-events:none;
   }
+  .hero-watermark {
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    font-family:'DM Sans',sans-serif; font-weight:700; font-size:58px; letter-spacing:6px;
+    color:rgba(79,184,232,0.07); white-space:nowrap; z-index:0; pointer-events:none;
+    text-transform:uppercase;
+  }
   .hero-logo {
     width:112px; height:112px; border-radius:50%; overflow:hidden;
     border:2px solid var(--gold); background:var(--dark2);
@@ -45,8 +51,8 @@
   .hero-logo img { width:100%; height:100%; object-fit:cover; transform:scale(1.16); display:block; }
   .hero h1 { font-family:'Playfair Display',serif; font-size:34px; font-weight:700; line-height:1.1; position:relative; z-index:1; }
   .hero-tagline {
-    font-family:'Playfair Display',serif; font-style:italic; font-size:14px;
-    color:var(--gold2); margin-top:6px; position:relative; z-index:1; letter-spacing:0.3px;
+    font-size:11px; font-weight:500; color:var(--gold);
+    margin-top:8px; position:relative; z-index:1; letter-spacing:2px; text-transform:uppercase;
   }
   .hero-sub { font-size:11px; color:var(--white2); margin-top:10px; position:relative; z-index:1; letter-spacing:1.5px; text-transform:uppercase; }
   .hero-divider { position:relative; height:1px; background:linear-gradient(90deg,transparent,rgba(79,184,232,0.5),transparent); }
@@ -191,9 +197,10 @@
 <body>
 
 <div class="hero">
-  <div class="hero-logo"><img src="logo-icon.png" alt="Barbearia 1890"></div>
-  <h1 onclick="location.reload()" style="cursor:pointer">Barbearia 1890</h1>
-  <div class="hero-tagline">Fernando Pedro · Barbeiro</div>
+  <div class="hero-watermark">BARBEARIA 1890</div>
+  <div class="hero-logo"><img src="logo-icon.png" alt="Fernando Pedro - Barbearia 1890"></div>
+  <h1 onclick="location.reload()" style="cursor:pointer">Fernando Pedro</h1>
+  <div class="hero-tagline">Barbeiro</div>
   <div class="hero-sub" id="heroSub">A carregar...</div>
 </div>
 <div class="hero-divider"><span>✦</span></div>
